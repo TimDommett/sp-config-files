@@ -1,0 +1,24 @@
+{
+    "schema": "iglu:com.snowplowanalytics.snowplow.storage/bigquery_config/jsonschema/1-0-0",
+    "data": {
+        "name": "BigQuery",
+        "id": "9d55b1f5-b263-4293-859b-f1b0138f14ea",
+
+        "projectId": "snowplow-open-source-petlab",
+        "datasetId": "snowplow_production_dataset",
+        "tableId": "events",
+
+        "input": "snowplow-enriched-good-sub",
+        "typesTopic": "snowplow-bq-types",
+        "typesSubscription": "snowplow-bq-types-sub",
+        "badRows": "snowplow-bq-bad-rows",
+        "failedInserts": "snowplow-bq-bad-inserts",
+
+        "load": {
+            "mode": "STREAMING_INSERTS",
+            "retry": false
+        },
+
+        "purpose": "ENRICHED_EVENTS"
+    }
+}
